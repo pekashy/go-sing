@@ -1,0 +1,7 @@
+{
+  "default_subscription_url": "",
+  "sing_box_license_file": "https://raw.githubusercontent.com/SagerNet/sing-box/3b3a25100899c0bf9de688d8371454b7b0255694/LICENSE",
+  "sing_box_zip_url": "https://github.com/SagerNet/sing-box/releases/download/v1.12.0-rc.4/sing-box-1.12.0-rc.4-windows-amd64.zip",
+  "in_archive_exec_path": "sing-box-1.12.0-rc.4-windows-amd64/sing-box.exe",
+  "sing_box_version": "1.12.0-rc.4"
+}
