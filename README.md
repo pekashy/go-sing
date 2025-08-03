@@ -1,12 +1,19 @@
 # Go-Sing VPN Client GUI
 
-![Icon](Icon.png)
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<img src="Icon.png" height="300">
+</div>
 
 A Windows VPN client GUI for sing-box written in Go. 
 
 > **⚠️ Note**: This is an independent project with no association or endorsement from the sing-box team.
 
 ## ✨ Features
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<img src="app_screenshot.png" height="600">
+</div>
+
 
 - **Full sing-box compatibility**: Supports all sing-box features including DNS, routing, and different outbound protocols
 - **Auto-updates**: Automatically downloads and updates sing-box binaries

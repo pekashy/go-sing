@@ -34,9 +34,16 @@ type Controller struct {
 	deliveryConfig   *config.DeliveryConfig
 }
 
+func rootify(p string) string {
+	if len(p) == 2 && p[1] == ':' {
+		return p + `\`
+	}
+	return p
+}
+
 func NewController(logger Logger) *Controller {
 	appDir, _ := os.Executable()
-	appDir = filepath.Dir(appDir)
+	appDir = rootify(filepath.Dir(appDir))
 
 	ctx, cancel := context.WithCancel(context.Background())
 

@@ -24,6 +24,13 @@ const (
 	SW_SHOW                = 5
 )
 
+func rootify(p string) string {
+	if len(p) == 2 && p[1] == ':' {
+		return p + `\`
+	}
+	return p
+}
+
 func IsGoSingElevated() bool {
 	handle, err := syscall.GetCurrentProcess()
 	if err != nil {
@@ -131,7 +138,7 @@ func LaunchSingBoxElevated(appDir string) error {
 	}
 
 	cmdArgs := fmt.Sprintf("/C \"\"%s\" run -c \"%s\" -D \"%s\" > \"%s\" 2>&1\"",
-		singBoxPath, configPath, appDir, logFilePath)
+		singBoxPath, configPath, rootify(appDir), logFilePath)
 
 	return RunElevated("cmd.exe", cmdArgs, appDir, false)
 }
